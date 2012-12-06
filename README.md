@@ -7,4 +7,4 @@ I take zero credit for the TCPDF library.
 
 This can be used to generate fancy looking invoices, reports, etc. on the fly.
 
-![Example Output](https://raw.github.com/kknoer/tcpdf_output_buffer/screenshot.png)
+![Example Output](https://raw.github.com/kknoer/tcpdf_output_buffer/master/screenshot.png)
