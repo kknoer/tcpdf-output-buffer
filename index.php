@@ -17,20 +17,41 @@ ob_start();
 ?>
 <style>
 .table-format {
-    padding: 10px;
-    border: 0.5px solid #999;
+    padding: 6px;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+.table-format th {
+    border: .5px solid #777;
+    background-color: #eee;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table-format td {
+    border: .5px solid #777;
 }
 </style>
-
 <table class="table-format">
     <tr>
         <th>Column 1</th>
         <th>Column 2</th>
+        <th>Column 3</th>
+        <th>Column 4</th>
     </tr>
-    <tr>
-        <td>Value 1</td>
-        <td>Value 2</td>
-    </tr>
+    <?php
+    for($i = 1; $i <= 10; $i++) {
+    ?>
+        <tr>
+            <td>Value 1</td>
+            <td>Value 2</td>
+            <td>Value 3</td>
+            <td>Value 4</td>
+        </tr>
+    <?php
+    }
+    ?>
 </table>
 <?php
 $html_result = trim(ob_get_clean());
