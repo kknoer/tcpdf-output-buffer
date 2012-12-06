@@ -1,13 +1,41 @@
 <?php
+require_once('tcpdf/tcpdf.php');
+
+class MYPDF extends TCPDF {
+    public function Header() {
+        // Clear default header output
+    }
+
+    public function Footer() {
+        // Clear default footer output
+    }
+}
+
+$pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 ob_start();
 ?>
-<table>
+<style>
+.table-format {
+    padding: 10px;
+    border: 0.5px solid #999;
+}
+</style>
+
+<table class="table-format">
     <tr>
-       <td>
+        <th>Column 1</th>
+        <th>Column 2</th>
+    </tr>
+    <tr>
+        <td>Value 1</td>
+        <td>Value 2</td>
     </tr>
 </table>
 <?php
-$html = ob_end_clean();
+$html_result = trim(ob_get_clean());
 
-echo $html;
+$pdf->AddPage();
+$pdf->writeHTML($html_result);
+$pdf->lastPage();
+$pdf->Output('doc.pdf', 'D');
