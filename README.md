@@ -10,6 +10,6 @@ This can be used to generate fancy looking invoices, reports, etc. on the fly.  
 Both HTML and CSS are interpreted extremely well by this library, but some elements and properties will need to be tested.
 
 Basic Example Output
-===========
+--------------------
 
 ![Example Output](https://raw.github.com/kknoer/tcpdf_output_buffer/master/screenshot.png)
