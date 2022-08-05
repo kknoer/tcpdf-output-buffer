@@ -1,4 +1,4 @@
-tcpdf_output_buffer
+TCPDF Output Buffer
 ===================
 
 A output buffer technique to be used in combination with the brilliant TCPDF library created by @nicolaasuni (http://www.tcpdf.org)
